@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HandMovement : MonoBehaviour {
+public class MouseHandMovement : MonoBehaviour {
 
     //the layers the ray can hit
     public LayerMask positionLayer;
