@@ -2,35 +2,50 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using GODSEND;
 
-public class ShowdownManager : MonoBehaviour {
+public class ShowdownManager : MonoBehaviour
+{
 
-	public GameObject KillBearScreen, HugBearScreen;
+	public GameObject DecisionScreen, KillBearScreen, HugBearScreen;
 
-	void Awake () {
+	void Awake ()
+	{
 		KillBearScreen.SetActive (false);
 		HugBearScreen.SetActive (false);
 	}
 
-	void Start(){
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
+	void Start ()
+	{
 		
 	}
 
-	public void FightBear(){
+	public void FightBear ()
+	{
+		DecisionScreen.SetActive (false);
 		KillBearScreen.SetActive (true);
 	}
 
-	public void DontFight(){
-		GODSEND.GameSceneManager.GSM.UnloadLastScene ();
-		GODSEND.GameSceneManager.GSM.LoadSpecificGameplayLevel (true);
+	public void DontFight ()
+	{
+		if (GameSceneManager.GSM is GODSEND.GameSceneManager) {
+			GameSceneManager.GSM.UnloadLastScene ();
+			GameSceneManager.GSM.LoadSpecificGameplayLevel (true);
+		} else
+			DecisionScreen.SetActive (false);
 	}
 
-	public void BefriendBear(){
+	public void BefriendBear ()
+	{
+		DecisionScreen.SetActive (false);
 		HugBearScreen.SetActive (true);
+	}
+
+	public void ReturnToMenu ()
+	{
+		if (GameSceneManager.GSM is GODSEND.GameSceneManager) {
+			GameSceneManager.GSM.UnloadLastScene ();
+			GameSceneManager.GSM.QuitToMenuInGame ();
+		}
 	}
 }

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: BearFightTimeline
   m_EditorClassIdentifier: 
   m_Id: 0
-  m_NextId: 21
+  m_NextId: 23
   m_Tracks:
   - {fileID: 114278354713252244}
   m_FixedDuration: 0
@@ -1521,6 +1521,17 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: Active
   m_PostPlaybackState: 0
+--- !u!114 &114557046390830922
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 442072544, guid: 6a10b2909283487f913b00d94cd3faf5, type: 3}
+  m_Name: ActivationPlayableAsset
+  m_EditorClassIdentifier: 
 --- !u!114 &114603904722223710
 MonoBehaviour:
   m_ObjectHideFlags: 1
