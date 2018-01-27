@@ -6,6 +6,7 @@ using GODSEND;
 public class MainMenu : MonoBehaviour {
 
 	public void LoadRandomMinigame(){
+		if(GameSceneManager.GSM is GameSceneManager)
 		GameSceneManager.GSM.LoadSpecificGameplayLevel (true);
 	}
 
