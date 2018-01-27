@@ -211,6 +211,8 @@ public class LevelSceneEditor : Editor
             t_SI.ElementName = arrayIndex + ". " + t_SI.SceneName;
         else
             t_SI.ElementName = t_SI.SceneName;
+
+		EditorUtility.SetDirty(target);
     }
 
     void RefreshBuildIndex(SceneInfo t_SI)

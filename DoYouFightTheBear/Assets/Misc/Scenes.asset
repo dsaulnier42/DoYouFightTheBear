@@ -11,22 +11,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f110447f5d0c54b298309b1942ced928, type: 3}
   m_Name: Scenes
   m_EditorClassIdentifier: 
-  ScenesInBuildSettings: []
+  ScenesInBuildSettings:
+  - Index
+  - LoadingScreen
+  - MainMenu
+  - ShowdownScene
+  - SampleGame
   IndexScene:
     ElementName: 
     SceneName: 
     BuildIndex: 0
   MenuScene:
-    ElementName: 
-    SceneName: 
-    BuildIndex: 0
+    ElementName: MainMenu
+    SceneName: MainMenu
+    BuildIndex: 2
   LoadingScene:
-    ElementName: 
-    SceneName: 
-    BuildIndex: 0
+    ElementName: LoadingScreen
+    SceneName: LoadingScreen
+    BuildIndex: 1
   c_ShowdownScene:
-    ElementName: 
-    SceneName: 
-    BuildIndex: 0
+    ElementName: ShowdownScene
+    SceneName: ShowdownScene
+    BuildIndex: 3
   DefaultGameplayIndex: 0
-  GameplayScenes: []
+  GameplayScenes:
+  - ElementName: 0. SampleGame
+    SceneName: SampleGame
+    BuildIndex: 4
