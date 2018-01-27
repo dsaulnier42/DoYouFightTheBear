@@ -10,7 +10,7 @@ public class HandMovement : MonoBehaviour {
 
     public Vector3 handOffset;
 
-    public GameObject grabable;
+    public Mouse mouse;
 
     void Update()
     {
@@ -20,14 +20,19 @@ public class HandMovement : MonoBehaviour {
         {
             CheckForGrabable();
         }
+        if (Input.GetMouseButtonDown(0))
+        {
+            if(mouse!= null)
+                mouse.Click();
+        }
         if (Input.GetMouseButtonUp(1))
         {
-            grabable = null;
+            mouse = null;
         }
 
-        if(grabable != null)
+        if(mouse != null)
         {
-            grabable.transform.position = new Vector3(transform.position.x, grabable.transform.position.y, transform.position.z);
+            mouse.transform.position = new Vector3(transform.position.x, mouse.transform.position.y, transform.position.z);
         }
 
     }
@@ -51,7 +56,7 @@ public class HandMovement : MonoBehaviour {
         RaycastHit hit;
         if (Physics.Raycast(transform.position,Vector3.down, out hit, Mathf.Infinity, grabLayer))
         {
-            grabable = hit.collider.gameObject;
+            mouse = hit.collider.gameObject.GetComponent<Mouse>();
         }
     }
 }
