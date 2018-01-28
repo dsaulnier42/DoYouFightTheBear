@@ -77,7 +77,7 @@ public class iPadManager : MonoBehaviour {
         for (int i = 0; i < bodies.Length; i++)
         {
             bodies[i].isKinematic = false;
-            bodies[i].velocity = (Vector3.up) * 300;
+            bodies[i].velocity = (Vector3.up) * 30;
         }
         bear.GetComponent<Rigidbody>().velocity = bear.transform.forward * 300;
         yield return new WaitForSeconds(.8f);
