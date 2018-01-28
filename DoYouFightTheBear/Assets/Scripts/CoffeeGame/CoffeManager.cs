@@ -42,12 +42,8 @@ public class CoffeManager : MonoBehaviour {
 
 
             coffeeTimer -= Time.deltaTime;
-<<<<<<< HEAD
-			textMesh.text = "Coffee \nTime In\n" + Mathf.RoundToInt(coffeeTimer);
 
-=======
             textMesh.text = "" + Mathf.RoundToInt(coffeeTimer);
->>>>>>> 2d7b6474b1c0b33000c90dac9a1fb90948af01b3
         }
 
 
