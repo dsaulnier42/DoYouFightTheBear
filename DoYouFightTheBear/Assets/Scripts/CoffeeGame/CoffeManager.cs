@@ -20,6 +20,7 @@ public class CoffeManager : MonoBehaviour {
     private void Start()
     {
         bodies = bodyHolder.GetComponentsInChildren<Rigidbody>();
+		bear.SetActive (false);
     }
 
     private void Update()
