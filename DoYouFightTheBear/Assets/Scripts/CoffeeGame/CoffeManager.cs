@@ -40,10 +40,6 @@ public class CoffeManager : MonoBehaviour {
             End();
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            SpawnBear();
-        }
     }
 
     public void SetCountdown(bool cd)
