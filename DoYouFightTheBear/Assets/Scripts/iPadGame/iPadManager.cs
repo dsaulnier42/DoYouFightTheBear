@@ -16,6 +16,7 @@ public class iPadManager : MonoBehaviour {
     public GameObject bear;
     public Transform camRot;
 
+
     private void Start()
     {
         bodies = bodyHolder.GetComponentsInChildren<Rigidbody>();
@@ -23,7 +24,7 @@ public class iPadManager : MonoBehaviour {
 
         for (int i = 0; i < iPadAmount; i++)
         {
-            GameObject newAd = Instantiate(iPadPrefab,Vector3.zero,Quaternion.identity);
+            GameObject newAd = Instantiate(iPadPrefab,bodyHolder);
             newAd.GetComponent<iPad>().Setup(this);
         }
         StartCoroutine(SpawnAd());
@@ -67,15 +68,18 @@ public class iPadManager : MonoBehaviour {
         }
         bear.SetActive(true);
         bear.GetComponent<Rigidbody>().velocity = bear.transform.forward * 300;
-        yield return new WaitForSeconds(.1f);
+        yield return new WaitForSeconds(.05f);
 
         for (int i = 0; i < bodies.Length; i++)
         {
             bodies[i].isKinematic = false;
+            bodies[i].velocity = (Vector3.up) * 300;
         }
         bear.GetComponent<Rigidbody>().velocity = bear.transform.forward * 300;
         yield return new WaitForSeconds(.8f);
         gameManager.StartShowdown();
+
+
     }
 
     private void Update()

@@ -20,6 +20,11 @@ public class iPad : MonoBehaviour {
         transform.eulerAngles = new Vector3(0, 180, 0);
     }
 
+    private void Update()
+    {
+        if (transform.position.y < -20)
+            transform.position = new Vector3(transform.position.x, 10, transform.position.y);
+    }
 
     public void Dropped()
     {
