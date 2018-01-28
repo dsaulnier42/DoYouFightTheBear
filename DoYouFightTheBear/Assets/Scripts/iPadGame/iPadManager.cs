@@ -15,19 +15,25 @@ public class iPadManager : MonoBehaviour {
 
     public GameObject bear;
     public Transform camRot;
+	bool firstIpadWasPlacedCorrectly;
 
     private void Start()
     {
         bodies = bodyHolder.GetComponentsInChildren<Rigidbody>();
-        iPadAmount = Random.Range(5, 7);
-
-        for (int i = 0; i < iPadAmount; i++)
-        {
-            GameObject newAd = Instantiate(iPadPrefab,Vector3.zero,Quaternion.identity);
-            newAd.GetComponent<iPad>().Setup(this);
-        }
-        StartCoroutine(SpawnAd());
+		Invoke ("OffsetSpawn", 1);
     }
+
+	void OffsetSpawn(){
+		iPadAmount = Random.Range(5, 7);
+
+		for (int i = 0; i < iPadAmount; i++)
+		{
+			GameObject newAd = Instantiate(iPadPrefab,Vector3.one,Quaternion.identity);
+			newAd.GetComponent<iPad>().Setup(this);
+			Debug.Log ("wow " + newAd.name);
+		}
+		StartCoroutine(SpawnAd());
+	}
 
     IEnumerator SpawnAd()
     {
@@ -40,6 +46,11 @@ public class iPadManager : MonoBehaviour {
 
     public void Stacked()
     {
+		if(!firstIpadWasPlacedCorrectly){
+			Invoke ("SpawnBear", 30);
+			firstIpadWasPlacedCorrectly = true;
+		}
+
         if (iPadAmount > 1)
         {
             iPadAmount--;
