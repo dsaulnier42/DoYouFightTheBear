@@ -20,7 +20,7 @@ public class MouseMouseManager : MonoBehaviour {
     private void Start()
     {
         bodies = bodyHolder.GetComponentsInChildren < Rigidbody>();
-
+        bear.SetActive(false);
         adAmount = Random.Range(5, 7);
 
         for (int i = 0; i < adAmount; i++)
@@ -80,11 +80,12 @@ public class MouseMouseManager : MonoBehaviour {
         }
         bear.SetActive(true);
         bear.GetComponent<Rigidbody>().velocity = bear.transform.forward * 200;
-        yield return new WaitForSeconds(.1f);
+        yield return new WaitForSeconds(.2f);
 
         for (int i = 0; i < bodies.Length; i++)
         {
             bodies[i].isKinematic = false;
+            bodies[i].velocity = (Vector3.right + Vector3.up) * 10;
         }
 
         yield return new WaitForSeconds(.6f);
