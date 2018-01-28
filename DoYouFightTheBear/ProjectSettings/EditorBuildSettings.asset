@@ -23,3 +23,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Game Scenes/MouseMouseGame.unity
     guid: 55eaa4d3a51c86e4dac8099faf5b0aa6
+  - enabled: 1
+    path: Assets/Scenes/Game Scenes/iPadStamper.unity
+    guid: 8cc00f0d2a4b0ba46ae8c05efe93184c

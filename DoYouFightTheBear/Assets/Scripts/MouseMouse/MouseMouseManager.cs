@@ -87,7 +87,7 @@ public class MouseMouseManager : MonoBehaviour {
             bodies[i].isKinematic = false;
         }
 
-        yield return new WaitForSeconds(.8f);
+        yield return new WaitForSeconds(.6f);
         gameManager.StartShowdown();
     }
 

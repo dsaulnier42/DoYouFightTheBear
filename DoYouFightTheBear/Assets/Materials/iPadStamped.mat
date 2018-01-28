@@ -23,7 +23,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DecalTex:
-        m_Texture: {fileID: 2800000, guid: eaecd5bdce2e03c45a3d5314e393414c, type: 3}
+        m_Texture: {fileID: 2800000, guid: 444e9ef545b8bfe4a9a198b2223c85ab, type: 3}
         m_Scale: {x: 1.5, y: 1.5}
         m_Offset: {x: -0.25, y: -0.25}
     - _DetailAlbedoMap:

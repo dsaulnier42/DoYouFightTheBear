@@ -17,6 +17,7 @@ public class iPad : MonoBehaviour {
     void SetRandomPosistion()
     {
         transform.position = new Vector3(Random.Range(-8f, 8f), 5 ,Random.Range(-8f, 8f));
+        transform.eulerAngles = new Vector3(0, 180, 0);
     }
 
 

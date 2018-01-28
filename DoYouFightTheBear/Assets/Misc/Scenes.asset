@@ -18,6 +18,7 @@ MonoBehaviour:
   - ShowdownScene
   - SampleGame
   - MouseMouseGame
+  - iPadStamper
   IndexScene:
     ElementName: 
     SceneName: 
@@ -39,3 +40,6 @@ MonoBehaviour:
   - ElementName: 1. MouseMouseGame
     SceneName: MouseMouseGame
     BuildIndex: 5
+  - ElementName: 1. iPadStamper
+    SceneName: iPadStamper
+    BuildIndex: 6
