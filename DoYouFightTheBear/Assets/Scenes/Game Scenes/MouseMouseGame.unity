@@ -158,6 +158,10 @@ Prefab:
       propertyPath: cursor
       value: 
       objectReference: {fileID: 574291412}
+    - target: {fileID: 4218490027204464, guid: bf5605a0db96c35439b79405b3e867ea, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 45
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bf5605a0db96c35439b79405b3e867ea, type: 2}
   m_IsPrefabParent: 0
