@@ -14,5 +14,7 @@ public class GameManager : MonoBehaviour
 	{
 		if (GODSEND.GameSceneManager.GSM is GODSEND.GameSceneManager)
 			GODSEND.GameSceneManager.GSM.AddCustomSceneDirect ();
+		else
+			Debug.LogWarning ("Call for GameSceneManager to load level, but the GSM doesn't esist.");
 	}
 }

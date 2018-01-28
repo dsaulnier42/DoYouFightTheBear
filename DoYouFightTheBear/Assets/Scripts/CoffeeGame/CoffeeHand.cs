@@ -30,7 +30,6 @@ public class CoffeeHand : MonoBehaviour {
         }
         if (Input.GetMouseButtonUp(1))
         {
-            grabbed = null;
             Dropped();
         }
 
@@ -44,10 +43,12 @@ public class CoffeeHand : MonoBehaviour {
     void Dropped()
     {
         RaycastHit hit;
-        if (Physics.Raycast(transform.position + Vector3.up * 50, Vector3.down, out hit, Mathf.Infinity, coffeLayer))
+		if (grabbed != null && Physics.Raycast(transform.position + Vector3.up * 50, Vector3.down, out hit, Mathf.Infinity, coffeLayer))
         {
             coffeManager.SetCountdown(true);
+			grabbed.SendMessage ("TurnOnPartilces");
         }
+		grabbed = null;
     }
 
     public void FindMousePosition()

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -141,7 +141,7 @@ MonoBehaviour:
   m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 0
 --- !u!114 &109476888
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -344,12 +344,12 @@ Prefab:
     - target: {fileID: 224402524595799398, guid: bb98092ca6f264fb99dbd32d50d5c817,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -355
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224402524595799398, guid: bb98092ca6f264fb99dbd32d50d5c817,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -318
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 224402524595799398, guid: bb98092ca6f264fb99dbd32d50d5c817,
         type: 2}
@@ -395,6 +395,11 @@ Prefab:
         type: 2}
       propertyPath: m_Text
       value: 'Task: Close Windows'
+      objectReference: {fileID: 0}
+    - target: {fileID: 114949314029053832, guid: bb98092ca6f264fb99dbd32d50d5c817,
+        type: 2}
+      propertyPath: m_RaycastTarget
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bb98092ca6f264fb99dbd32d50d5c817, type: 2}

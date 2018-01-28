@@ -18,11 +18,11 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu Scenes/ShowdownScene.unity
     guid: a77270552d06347c1a90f242947dcc7d
   - enabled: 1
-    path: Assets/Scenes/Game Scenes/SampleGame.unity
-    guid: 016dc94795cab4a0a9e25918a2471691
-  - enabled: 1
     path: Assets/Scenes/Game Scenes/MouseMouseGame.unity
     guid: 55eaa4d3a51c86e4dac8099faf5b0aa6
   - enabled: 1
     path: Assets/Scenes/Game Scenes/iPadStamper.unity
     guid: 8cc00f0d2a4b0ba46ae8c05efe93184c
+  - enabled: 1
+    path: Assets/Scenes/Game Scenes/CoffeeMini.unity
+    guid: 93c38a144c499564696290bfa7ad3eef

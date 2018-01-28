@@ -16,9 +16,9 @@ MonoBehaviour:
   - LoadingScreen
   - MainMenu
   - ShowdownScene
-  - SampleGame
   - MouseMouseGame
   - iPadStamper
+  - CoffeeMini
   IndexScene:
     ElementName: 
     SceneName: 
@@ -39,7 +39,10 @@ MonoBehaviour:
   GameplayScenes:
   - ElementName: 1. MouseMouseGame
     SceneName: MouseMouseGame
-    BuildIndex: 5
+    BuildIndex: 4
   - ElementName: 1. iPadStamper
     SceneName: iPadStamper
+    BuildIndex: 5
+  - ElementName: 2. CoffeeMini
+    SceneName: CoffeeMini
     BuildIndex: 6
