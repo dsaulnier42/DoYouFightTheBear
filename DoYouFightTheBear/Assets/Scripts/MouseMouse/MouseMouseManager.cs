@@ -90,17 +90,9 @@ public class MouseMouseManager : MonoBehaviour {
             bodies[i].velocity = (Vector3.right + Vector3.up) * 10;
         }
 
-        yield return new WaitForSeconds(.6f);
+        yield return new WaitForSeconds(1f);
         gameManager.StartShowdown();
 
-    }
-
-    private void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.Space))
-        {
-            SpawnBear();
-        }
     }
 
 }
