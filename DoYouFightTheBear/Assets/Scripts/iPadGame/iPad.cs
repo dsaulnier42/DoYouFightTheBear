@@ -23,7 +23,7 @@ public class iPad : MonoBehaviour {
     private void Update()
     {
         if (transform.position.y < -20)
-            transform.position = new Vector3(transform.position.x, 10, transform.position.y);
+            transform.position = new Vector3(Random.Range(-8f, 8f), 5, Random.Range(-8f, 8f));
     }
 
     public void Dropped()
