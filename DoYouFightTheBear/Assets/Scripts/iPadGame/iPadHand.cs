@@ -7,12 +7,21 @@ public class iPadHand : MonoBehaviour {
     //the layers the ray can hit
     public LayerMask positionLayer;
     public LayerMask grabLayer;
+    public LayerMask iPadLayer;
 
     public Vector3 handOffset;
-
+    Vector3 startHandOffset;
     public GameObject grabbed;
     public Stamp stamp;
-    
+
+    public Material stampedMat;
+
+    bool stamping;
+
+    private void Start()
+    {
+        startHandOffset = handOffset;
+    }
 
     void Update()
     {
@@ -22,14 +31,20 @@ public class iPadHand : MonoBehaviour {
         {
             CheckForGrabable();
         }
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0)&& stamp != null)
         {
-
+            StampDown();
         }
         if (Input.GetMouseButtonUp(1))
         {
+            if (stamp == null && grabbed != null)
+                grabbed.GetComponent<iPad>().Dropped();
             grabbed = null;
+            if (stamp != null)
+                stamp.gameObject.transform.position = new Vector3(stamp.gameObject.transform.position.x, 3, stamp.gameObject.transform.position.z);
             stamp = null;
+            
+            transform.eulerAngles = new Vector3(0, 0, 0);
         }
 
         if (grabbed != null)
@@ -60,6 +75,31 @@ public class iPadHand : MonoBehaviour {
             }
                 
         }
+    }
+
+    void StampDown()
+    {
+        StartCoroutine(Stamping());
+
+    }
+
+    IEnumerator Stamping()
+    {
+        Renderer iPad =new Renderer();
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position + Vector3.up, Vector3.down, out hit, Mathf.Infinity, iPadLayer))
+        {
+            iPad = hit.transform.gameObject.GetComponent<Renderer>();
+            hit.transform.gameObject.GetComponent<iPad>().marked = true;
+        }
+        while (handOffset.y > 2)
+        {
+            handOffset.y -= 10f * Time.deltaTime;
+            yield return null;
+        }
+        handOffset = startHandOffset;
+        if(iPad !=null)
+            iPad.material = stampedMat;
     }
 
     public void CheckForGrabable()
