@@ -6,7 +6,7 @@ public class iPadManager : MonoBehaviour {
 
     public GameManager gameManager;
     public GameObject iPadPrefab;
-    int iPadAmount;
+    public int iPadAmount;
     public float spawnTime;
 
     Rigidbody[] bodies;
