@@ -46,7 +46,7 @@ public class CoffeeHand : MonoBehaviour {
 		if (grabbed != null && Physics.Raycast(transform.position + Vector3.up * 50, Vector3.down, out hit, Mathf.Infinity, coffeLayer))
         {
             coffeManager.SetCountdown(true);
-			//grabbed.SendMessage ("TurnOnPartilces");
+			grabbed.SendMessage ("TurnOnPartilces");
         }
 		grabbed = null;
     }
