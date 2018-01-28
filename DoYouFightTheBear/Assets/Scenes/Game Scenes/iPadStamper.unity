@@ -514,7 +514,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4101408433360816, guid: c779ff20d4db6404e9b5f53cf0011b2c, type: 2}
       propertyPath: m_LocalScale.y
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4101408433360816, guid: c779ff20d4db6404e9b5f53cf0011b2c, type: 2}
       propertyPath: m_LocalPosition.y
@@ -526,7 +526,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4337467076072752, guid: c779ff20d4db6404e9b5f53cf0011b2c, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.65
+      value: 0.17
       objectReference: {fileID: 0}
     - target: {fileID: 65968703626558386, guid: c779ff20d4db6404e9b5f53cf0011b2c,
         type: 2}
@@ -543,6 +543,11 @@ Prefab:
       propertyPath: stampSound
       value: 
       objectReference: {fileID: 8300000, guid: e3ec6d9ac5e19fb4d9a476a0ef07f5f2, type: 3}
+    - target: {fileID: 136585822182459228, guid: c779ff20d4db6404e9b5f53cf0011b2c,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c779ff20d4db6404e9b5f53cf0011b2c, type: 2}
   m_IsPrefabParent: 0
