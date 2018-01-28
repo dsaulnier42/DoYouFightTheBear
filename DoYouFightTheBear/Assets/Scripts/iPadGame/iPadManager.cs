@@ -80,7 +80,7 @@ public class iPadManager : MonoBehaviour {
             bodies[i].velocity = (Vector3.up) * 30;
         }
         bear.GetComponent<Rigidbody>().velocity = bear.transform.forward * 300;
-        yield return new WaitForSeconds(.8f);
+        yield return new WaitForSeconds(1);
         gameManager.StartShowdown();
 
 

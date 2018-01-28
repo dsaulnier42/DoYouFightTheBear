@@ -96,7 +96,7 @@ public class CoffeManager : MonoBehaviour {
             textMesh.gameObject.SetActive(false);
         }
 
-        yield return new WaitForSeconds(.6f);
+        yield return new WaitForSeconds(1f);
         gameManager.StartShowdown();
     }
 
