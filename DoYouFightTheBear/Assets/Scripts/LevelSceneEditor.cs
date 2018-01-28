@@ -29,6 +29,17 @@ public class LevelSceneEditor : Editor
         }
     }
 
+	void RefreshAll(){
+		RefreshBuildIndex (LSR.LoadingScene);
+		RefreshBuildIndex (LSR.MenuScene);
+		RefreshBuildIndex (LSR.c_ShowdownScene);
+
+		for (int i = 0; i < LSR.GameplayScenes.Count; i++)
+		{
+			RefreshBuildIndex(LSR.GameplayScenes[i]);
+		}
+	}
+
     public override void OnInspectorGUI()
     {
         //DrawDefaultInspector();
@@ -56,9 +67,11 @@ public class LevelSceneEditor : Editor
             EditorGUILayout.IntField(LSR.ScenesInBuildSettings.FindIndex(npcString => npcString == s));
             EditorGUILayout.EndHorizontal();
         }
+		if (GUILayout.Button ("Refresh"))
+			RefreshAll ();
+
         EditorGUILayout.Space();
         EditorGUILayout.LabelField("Important Scenes", EditorStyles.boldLabel);
-
         //index
         EditorGUILayout.BeginHorizontal();
         EditorGUILayout.ToggleLeft("Index", LSR.ScenesInBuildSettings[0] != null);
@@ -136,8 +149,6 @@ public class LevelSceneEditor : Editor
                 invalidSceneWarning.normal.textColor = Color.grey;
                 EditorGUILayout.LabelField(temp_info.SceneName + " is valid.", invalidSceneWarning);
             }
-
-
         }
 
         /*if (sceneAssetSuggested is SceneAsset)
