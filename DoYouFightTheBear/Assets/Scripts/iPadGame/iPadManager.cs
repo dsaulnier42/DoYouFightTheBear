@@ -20,15 +20,19 @@ public class iPadManager : MonoBehaviour {
     private void Start()
     {
         bodies = bodyHolder.GetComponentsInChildren<Rigidbody>();
-        iPadAmount = Random.Range(5, 7);
+		Invoke ("OffsetSpawn", 1);
+	}
 
-        for (int i = 0; i < iPadAmount; i++)
-        {
-            GameObject newAd = Instantiate(iPadPrefab,bodyHolder);
-            newAd.GetComponent<iPad>().Setup(this);
-        }
-        StartCoroutine(SpawnAd());
-    }
+	void OffsetSpawn(){
+		iPadAmount = Random.Range(5, 7);
+
+		for (int i = 0; i < iPadAmount; i++)
+		{
+			GameObject newAd = Instantiate(iPadPrefab,Vector3.one,Quaternion.identity);
+			newAd.GetComponent<iPad>().Setup(this);
+		}
+		StartCoroutine(SpawnAd());
+	}
 
     IEnumerator SpawnAd()
     {
@@ -90,3 +94,4 @@ public class iPadManager : MonoBehaviour {
         }
     }
 }
+
