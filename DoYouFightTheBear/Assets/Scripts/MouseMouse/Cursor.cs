@@ -13,6 +13,8 @@ public class Cursor : MonoBehaviour {
     public Vector2 screenConstraints;
     public LayerMask closeMask;
 
+    public Vector2 screenOffset;
+
     private void Start()
     {
         start = transform.position + new Vector3(-3, 1);
@@ -37,7 +39,7 @@ public class Cursor : MonoBehaviour {
 
         targetLocation.x = Mathf.Clamp(targetLocation.x + addPos.x, -screenConstraints.x, screenConstraints.x);
         //targetLocation.y +=  addPos.y;
-        targetLocation.y = Mathf.Clamp(targetLocation.y + addPos.y, -screenConstraints.y - 40, screenConstraints.x - 40);
+        targetLocation.y = Mathf.Clamp(targetLocation.y + addPos.y, -screenConstraints.y + screenOffset.y, screenConstraints.y + screenOffset.y);
     }
 
     public void CheckForCloseButton()
