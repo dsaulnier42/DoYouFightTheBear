@@ -12,6 +12,13 @@ public class MouseHandMovement : MonoBehaviour {
 
     public Mouse mouse;
 
+	public AudioClip clickSound;
+	private AudioSource source;
+
+	void Awake(){
+		source = GetComponent<AudioSource>();
+	}
+
     void Update()
     {
         FindMousePosition();
@@ -24,6 +31,7 @@ public class MouseHandMovement : MonoBehaviour {
         {
             if(mouse!= null)
                 mouse.Click();
+			source.PlayOneShot(clickSound);
         }
         if (Input.GetMouseButtonUp(1))
         {
