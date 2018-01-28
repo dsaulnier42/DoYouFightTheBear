@@ -17,6 +17,7 @@ MonoBehaviour:
   - MainMenu
   - ShowdownScene
   - SampleGame
+  - MouseMouseGame
   IndexScene:
     ElementName: 
     SceneName: 
@@ -35,6 +36,6 @@ MonoBehaviour:
     BuildIndex: 3
   DefaultGameplayIndex: 0
   GameplayScenes:
-  - ElementName: 0. SampleGame
-    SceneName: SampleGame
-    BuildIndex: 4
+  - ElementName: 1. MouseMouseGame
+    SceneName: MouseMouseGame
+    BuildIndex: 5

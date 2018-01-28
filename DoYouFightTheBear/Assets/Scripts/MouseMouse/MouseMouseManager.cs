@@ -4,14 +4,23 @@ using UnityEngine;
 
 public class MouseMouseManager : MonoBehaviour {
 
+    public GameManager gameManager;
     public GameObject adPrefab;
     int adAmount;
     public Transform screen;
     public float spawnTime;
 
+    Rigidbody[] bodies;
+    public Transform bodyHolder;
+    public Transform camera;
+
+    public GameObject bear;
+    public Transform camRot;
 
     private void Start()
     {
+        bodies = bodyHolder.GetComponentsInChildren < Rigidbody>();
+
         adAmount = Random.Range(5, 7);
 
         for (int i = 0; i < adAmount; i++)
@@ -46,7 +55,48 @@ public class MouseMouseManager : MonoBehaviour {
             Destroy(ad);
         }
         else
-            Debug.Log("LA BEAR");
+        {
+            Destroy(ad);
+            SpawnBear();
+        }
+    }
+
+    void SpawnBear()
+    {
+        StartCoroutine(BearAttack());
+    }
+
+    IEnumerator BearAttack()
+    {
+
+        float timer = 0;
+
+        while (timer < .9f)
+        {
+            camera.localRotation = Quaternion.Lerp(camera.localRotation, camRot.rotation , Time.time * .02f);
+
+            timer += Time.deltaTime;
+            yield return null;
+        }
+        bear.SetActive(true);
+        bear.GetComponent<Rigidbody>().velocity = bear.transform.forward * 200;
+        yield return new WaitForSeconds(.1f);
+
+        for (int i = 0; i < bodies.Length; i++)
+        {
+            bodies[i].isKinematic = false;
+        }
+
+        yield return new WaitForSeconds(.8f);
+        gameManager.StartShowdown();
+    }
+
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            SpawnBear();
+        }
     }
 
 }

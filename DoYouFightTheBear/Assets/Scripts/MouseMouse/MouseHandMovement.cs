@@ -32,6 +32,7 @@ public class MouseHandMovement : MonoBehaviour {
 
         if(mouse != null)
         {
+            Mathf.Clamp(1,2,2);
             mouse.transform.position = new Vector3(transform.position.x, mouse.transform.position.y, transform.position.z);
         }
 

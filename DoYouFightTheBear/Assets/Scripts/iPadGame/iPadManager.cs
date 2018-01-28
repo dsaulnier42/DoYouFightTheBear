@@ -4,10 +4,17 @@ using UnityEngine;
 
 public class iPadManager : MonoBehaviour {
 
+    public GameManager gameManager;
     public GameObject iPadPrefab;
     int iPadAmount;
     public float spawnTime;
 
+    Rigidbody[] bodies;
+    public Transform bodyHolder;
+    public Transform camera;
+
+    public GameObject bear;
+    public Transform camRot;
 
     private void Start()
     {
@@ -32,11 +39,41 @@ public class iPadManager : MonoBehaviour {
 
     public void Stacked()
     {
-        if (iPadAmount> 1)
+        if (iPadAmount > 1)
         {
             iPadAmount--;
         }
         else
-            Debug.Log("LA BEAR");
+            SpawnBear();
+    }
+
+    void SpawnBear()
+    {
+        StartCoroutine(BearAttack());
+    }
+
+    IEnumerator BearAttack()
+    {
+
+        float timer = 0;
+
+        while (timer < .9f)
+        {
+            camera.localRotation = Quaternion.Lerp(camera.localRotation, camRot.rotation, Time.time * .02f);
+
+            timer += Time.deltaTime;
+            yield return null;
+        }
+        bear.SetActive(true);
+        bear.GetComponent<Rigidbody>().velocity = bear.transform.forward * 200;
+        yield return new WaitForSeconds(.1f);
+
+        for (int i = 0; i < bodies.Length; i++)
+        {
+            bodies[i].isKinematic = false;
+        }
+
+        yield return new WaitForSeconds(.8f);
+        gameManager.StartShowdown();
     }
 }

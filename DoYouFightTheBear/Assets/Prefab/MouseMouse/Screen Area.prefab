@@ -111,7 +111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9eb02850195a394aa8565f782ae8ec4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lag: 2
+  lag: 4
   startOffset: {x: 0, y: 0, z: 0}
   screenConstraints: {x: 10, y: 10}
   closeMask:
