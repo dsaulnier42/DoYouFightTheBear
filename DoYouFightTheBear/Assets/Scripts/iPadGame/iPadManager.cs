@@ -6,7 +6,7 @@ public class iPadManager : MonoBehaviour {
 
     public GameManager gameManager;
     public GameObject iPadPrefab;
-    int iPadAmount;
+    public int iPadAmount;
     public float spawnTime;
 
     Rigidbody[] bodies;
@@ -20,15 +20,19 @@ public class iPadManager : MonoBehaviour {
     private void Start()
     {
         bodies = bodyHolder.GetComponentsInChildren<Rigidbody>();
-        iPadAmount = Random.Range(5, 7);
+		Invoke ("OffsetSpawn", 1);
+	}
 
-        for (int i = 0; i < iPadAmount; i++)
-        {
-            GameObject newAd = Instantiate(iPadPrefab,bodyHolder);
-            newAd.GetComponent<iPad>().Setup(this);
-        }
-        StartCoroutine(SpawnAd());
-    }
+	void OffsetSpawn(){
+		iPadAmount = Random.Range(5, 7);
+
+		for (int i = 0; i < iPadAmount; i++)
+		{
+			GameObject newAd = Instantiate(iPadPrefab,Vector3.one,Quaternion.identity);
+			newAd.GetComponent<iPad>().Setup(this);
+		}
+		StartCoroutine(SpawnAd());
+	}
 
     IEnumerator SpawnAd()
     {
@@ -73,7 +77,7 @@ public class iPadManager : MonoBehaviour {
         for (int i = 0; i < bodies.Length; i++)
         {
             bodies[i].isKinematic = false;
-            bodies[i].velocity = (Vector3.up) * 300;
+            bodies[i].velocity = (Vector3.up) * 30;
         }
         bear.GetComponent<Rigidbody>().velocity = bear.transform.forward * 300;
         yield return new WaitForSeconds(.8f);
@@ -90,3 +94,4 @@ public class iPadManager : MonoBehaviour {
         }
     }
 }
+

@@ -5,7 +5,7 @@ using UnityEngine;
 public class CoffeManager : MonoBehaviour {
 
     public GameManager gameManager;
-    public float coffeeTimer;
+    public float coffeeTimer = 25;
 
     bool countdown;
     public TextMesh textMesh;
@@ -42,15 +42,19 @@ public class CoffeManager : MonoBehaviour {
 
 
             coffeeTimer -= Time.deltaTime;
+<<<<<<< HEAD
 			textMesh.text = "Coffee \nTime In\n" + Mathf.RoundToInt(coffeeTimer);
 
+=======
+            textMesh.text = "" + Mathf.RoundToInt(coffeeTimer);
+>>>>>>> 2d7b6474b1c0b33000c90dac9a1fb90948af01b3
         }
 
 
         if (coffeeTimer < 0 && countdown)
         {
             countdown = false;
-            textMesh.text = "Coffee";
+            textMesh.text = "Done";
             End();
         }
 
@@ -96,7 +100,7 @@ public class CoffeManager : MonoBehaviour {
         for (int i = 0; i < bodies.Length; i++)
         {
             bodies[i].isKinematic = false;
-            bodies[i].velocity = Vector3.up * 3;
+            bodies[i].velocity = (Vector3.up + -Vector3.forward) * 20;
             textMesh.gameObject.SetActive(false);
         }
 

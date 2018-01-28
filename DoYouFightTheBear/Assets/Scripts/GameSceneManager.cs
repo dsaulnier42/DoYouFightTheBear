@@ -26,6 +26,9 @@ namespace GODSEND
 
 		public static event UIEvent TogglePauseScreen;
 
+		List<int> RandomSceneIndexes = new List<int>();
+		int currentLevelIndex;
+
 		private void Awake ()
 		{
 			if (GSM != null) {
@@ -81,9 +84,13 @@ namespace GODSEND
 
 		public void LoadSpecificGameplayLevel (bool loadRandom = false)
 		{
-			if (loadRandom)
-				LoadSpecificGameplayLevel (Random.Range (0, LevelSceneAsset.GameplayScenes.Count));
-			else
+			if (loadRandom) {
+				
+
+
+				LoadSpecificGameplayLevel (currentLevelIndex % LevelSceneAsset.GameplayScenes.Count);//Random.Range (0, LevelSceneAsset.GameplayScenes.Count));
+				currentLevelIndex++;
+			}else
 				LoadSpecificGameplayLevel (0);
 		}
 

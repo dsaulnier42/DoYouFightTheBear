@@ -16,6 +16,7 @@ public class MouseMouseManager : MonoBehaviour {
 
     public GameObject bear;
     public Transform camRot;
+    public GameObject breakable;
 
     private void Start()
     {
@@ -81,7 +82,8 @@ public class MouseMouseManager : MonoBehaviour {
         bear.SetActive(true);
         bear.GetComponent<Rigidbody>().velocity = bear.transform.forward * 200;
         yield return new WaitForSeconds(.2f);
-
+        breakable.SetActive(false);
+        bear.GetComponent<Rigidbody>().velocity = bear.transform.forward * 200;
         for (int i = 0; i < bodies.Length; i++)
         {
             bodies[i].isKinematic = false;
@@ -90,6 +92,7 @@ public class MouseMouseManager : MonoBehaviour {
 
         yield return new WaitForSeconds(.6f);
         gameManager.StartShowdown();
+
     }
 
     private void Update()

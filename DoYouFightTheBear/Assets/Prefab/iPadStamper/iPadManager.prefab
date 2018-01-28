@@ -53,6 +53,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
   iPadPrefab: {fileID: 1723946972579328, guid: 7c6efcbcb359be34d8a57ef00da31caf, type: 2}
+  iPadAmount: 0
   spawnTime: 12
   bodyHolder: {fileID: 0}
   camera: {fileID: 0}
