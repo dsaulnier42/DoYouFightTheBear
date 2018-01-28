@@ -17,10 +17,19 @@ public class CoffeManager : MonoBehaviour {
     public GameObject bear;
     public Transform camRot;
 
+	public AudioClip coffeeSound;
+	private AudioSource sore;
+	private bool playOnce;
+
+	public void Awake ()
+	{
+		sore = GetComponent<AudioSource>();
+	}
     private void Start()
     {
         bodies = bodyHolder.GetComponentsInChildren<Rigidbody>();
 		bear.SetActive (false);
+
     }
 
     private void Update()
@@ -28,8 +37,13 @@ public class CoffeManager : MonoBehaviour {
 
         if (countdown)
         {
+
+				//sore.PlayOneShot (coffeeSound);
+
+
             coffeeTimer -= Time.deltaTime;
-            textMesh.text = "Coffee \nTime In\n" + Mathf.RoundToInt(coffeeTimer);
+			textMesh.text = "Coffee \nTime In\n" + Mathf.RoundToInt(coffeeTimer);
+
         }
 
 
@@ -49,6 +63,7 @@ public class CoffeManager : MonoBehaviour {
     public void SetCountdown(bool cd)
     {
         countdown = cd;
+
     }
 
     void End()
