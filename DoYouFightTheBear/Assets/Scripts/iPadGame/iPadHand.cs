@@ -16,11 +16,15 @@ public class iPadHand : MonoBehaviour {
 
     public Material stampedMat;
 
+	public AudioClip stampSound;
+	private AudioSource source;
+
     bool stamping;
 
     private void Start()
     {
         startHandOffset = handOffset;
+		source = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -34,6 +38,7 @@ public class iPadHand : MonoBehaviour {
         if (Input.GetMouseButtonDown(0)&& stamp != null)
         {
             StampDown();
+
         }
         if (Input.GetMouseButtonUp(1))
         {
@@ -87,10 +92,12 @@ public class iPadHand : MonoBehaviour {
     {
         Renderer iPad =new Renderer();
         RaycastHit hit;
+
         if (Physics.Raycast(transform.position + Vector3.up, Vector3.down, out hit, Mathf.Infinity, iPadLayer))
         {
             iPad = hit.transform.gameObject.GetComponent<Renderer>();
             hit.transform.gameObject.GetComponent<iPad>().marked = true;
+			source.PlayOneShot(stampSound);
         }
         while (handOffset.y > 2)
         {
