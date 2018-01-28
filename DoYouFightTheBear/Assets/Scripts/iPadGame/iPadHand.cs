@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class iPadHand : MonoBehaviour {
 
+    public GameObject[] handToggle;
+
     //the layers the ray can hit
     public LayerMask positionLayer;
     public LayerMask grabLayer;
