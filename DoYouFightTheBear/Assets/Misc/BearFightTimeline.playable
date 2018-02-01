@@ -15,12 +15,12 @@ MonoBehaviour:
   m_NextId: 29
   m_Tracks:
   - {fileID: 114278354713252244}
-  m_FixedDuration: 0
+  m_FixedDuration: 54.86666666666667
   m_EditorSettings:
     fps: 60
   m_UpdateMode: 0
   m_ParameterName: 
-  m_DurationMode: 0
+  m_DurationMode: 1
 --- !u!74 &74306548818681870
 AnimationClip:
   m_ObjectHideFlags: 0
@@ -857,7 +857,6 @@ MonoBehaviour:
   m_Muted: 0
   m_Soloed: 0
   m_Height: 0
-  m_InlineAnimationCurveHeight: 100
   m_CustomPlayableFullTypename: 
   m_AnimClip: {fileID: 0}
   m_Parent: {fileID: 114278354713252244}
@@ -928,11 +927,11 @@ MonoBehaviour:
     m_PostExtrapolationTime: 0
     m_PreExtrapolationTime: 0
     m_DisplayName: Active
-  - m_Start: 48.64999999999833
+  - m_Start: 48.516666666666666
     m_ClipIn: 0
     m_Asset: {fileID: 114064504904757112}
     m_UnderlyingAsset: {fileID: 114064504904757112}
-    m_Duration: 6.50000000000067
+    m_Duration: 6.633333333332333
     m_ParentID: 0
     m_TimeScale: 1
     m_BlendCurve:
@@ -1031,7 +1030,6 @@ MonoBehaviour:
   m_Muted: 0
   m_Soloed: 0
   m_Height: 0
-  m_InlineAnimationCurveHeight: 100
   m_CustomPlayableFullTypename: 
   m_AnimClip: {fileID: 0}
   m_Parent: {fileID: 114278354713252244}
@@ -1117,7 +1115,6 @@ MonoBehaviour:
   m_Muted: 0
   m_Soloed: 0
   m_Height: 0
-  m_InlineAnimationCurveHeight: 100
   m_CustomPlayableFullTypename: 
   m_AnimClip: {fileID: 74333773109784968}
   m_Parent: {fileID: 114278354713252244}
@@ -1169,7 +1166,6 @@ MonoBehaviour:
   m_Muted: 0
   m_Soloed: 0
   m_Height: 0
-  m_InlineAnimationCurveHeight: 100
   m_CustomPlayableFullTypename: 
   m_AnimClip: {fileID: 74787585269325558}
   m_Parent: {fileID: 114278354713252244}
@@ -1199,7 +1195,6 @@ MonoBehaviour:
   m_Muted: 0
   m_Soloed: 0
   m_Height: 0
-  m_InlineAnimationCurveHeight: 84
   m_CustomPlayableFullTypename: 
   m_AnimClip: {fileID: 0}
   m_Parent: {fileID: 114278354713252244}
@@ -1270,7 +1265,7 @@ MonoBehaviour:
     m_PostExtrapolationTime: 0
     m_PreExtrapolationTime: 0
     m_DisplayName: Active
-  - m_Start: 48.31666666666633
+  - m_Start: 48.25
     m_ClipIn: 0
     m_Asset: {fileID: 114356470611956500}
     m_UnderlyingAsset: {fileID: 114356470611956500}
@@ -1351,7 +1346,6 @@ MonoBehaviour:
   m_Muted: 0
   m_Soloed: 0
   m_Height: 0
-  m_InlineAnimationCurveHeight: 100
   m_CustomPlayableFullTypename: 
   m_AnimClip: {fileID: 0}
   m_Parent: {fileID: 114278354713252244}
@@ -1361,7 +1355,7 @@ MonoBehaviour:
     m_ClipIn: 0
     m_Asset: {fileID: 114473422797905062}
     m_UnderlyingAsset: {fileID: 114473422797905062}
-    m_Duration: 39.983333333333334
+    m_Duration: 39.96666666666667
     m_ParentID: 0
     m_TimeScale: 1
     m_BlendCurve:
@@ -1449,7 +1443,6 @@ MonoBehaviour:
   m_Muted: 0
   m_Soloed: 0
   m_Height: 0
-  m_InlineAnimationCurveHeight: 100
   m_CustomPlayableFullTypename: 
   m_AnimClip: {fileID: 0}
   m_Parent: {fileID: 114278354713252244}
@@ -1612,7 +1605,6 @@ MonoBehaviour:
   m_Muted: 0
   m_Soloed: 0
   m_Height: 0
-  m_InlineAnimationCurveHeight: 133
   m_CustomPlayableFullTypename: 
   m_AnimClip: {fileID: 74708359815013962}
   m_Parent: {fileID: 114278354713252244}
@@ -1642,7 +1634,6 @@ MonoBehaviour:
   m_Muted: 0
   m_Soloed: 0
   m_Height: 0
-  m_InlineAnimationCurveHeight: 100
   m_CustomPlayableFullTypename: 
   m_AnimClip: {fileID: 0}
   m_Parent: {fileID: 11400000}
@@ -1684,17 +1675,16 @@ MonoBehaviour:
   m_Muted: 0
   m_Soloed: 0
   m_Height: 0
-  m_InlineAnimationCurveHeight: 100
   m_CustomPlayableFullTypename: 
   m_AnimClip: {fileID: 0}
   m_Parent: {fileID: 114278354713252244}
   m_Children: []
   m_Clips:
-  - m_Start: 48.650000000000325
+  - m_Start: 48.75
     m_ClipIn: 0
     m_Asset: {fileID: 114140027706452482}
     m_UnderlyingAsset: {fileID: 114140027706452482}
-    m_Duration: 6.499999999999673
+    m_Duration: 6.399999999999999
     m_ParentID: 0
     m_TimeScale: 1
     m_BlendCurve:
@@ -1771,7 +1761,6 @@ MonoBehaviour:
   m_Muted: 0
   m_Soloed: 0
   m_Height: 0
-  m_InlineAnimationCurveHeight: 100
   m_CustomPlayableFullTypename: 
   m_AnimClip: {fileID: 0}
   m_Parent: {fileID: 114278354713252244}
@@ -1857,7 +1846,6 @@ MonoBehaviour:
   m_Muted: 0
   m_Soloed: 0
   m_Height: 0
-  m_InlineAnimationCurveHeight: 100
   m_CustomPlayableFullTypename: 
   m_AnimClip: {fileID: 74564403774927264}
   m_Parent: {fileID: 114278354713252244}
@@ -1923,7 +1911,6 @@ MonoBehaviour:
   m_Muted: 0
   m_Soloed: 0
   m_Height: 0
-  m_InlineAnimationCurveHeight: 100
   m_CustomPlayableFullTypename: 
   m_AnimClip: {fileID: 0}
   m_Parent: {fileID: 114278354713252244}
@@ -2010,7 +1997,6 @@ MonoBehaviour:
   m_Muted: 0
   m_Soloed: 0
   m_Height: 0
-  m_InlineAnimationCurveHeight: 100
   m_CustomPlayableFullTypename: 
   m_AnimClip: {fileID: 0}
   m_Parent: {fileID: 114278354713252244}
@@ -2132,7 +2118,6 @@ MonoBehaviour:
   m_Muted: 0
   m_Soloed: 0
   m_Height: 0
-  m_InlineAnimationCurveHeight: 100
   m_CustomPlayableFullTypename: 
   m_AnimClip: {fileID: 0}
   m_Parent: {fileID: 114278354713252244}
@@ -2247,7 +2232,6 @@ MonoBehaviour:
   m_Muted: 0
   m_Soloed: 0
   m_Height: 0
-  m_InlineAnimationCurveHeight: 100
   m_CustomPlayableFullTypename: 
   m_AnimClip: {fileID: 0}
   m_Parent: {fileID: 114278354713252244}
@@ -2334,7 +2318,6 @@ MonoBehaviour:
   m_Muted: 0
   m_Soloed: 0
   m_Height: 0
-  m_InlineAnimationCurveHeight: 100
   m_CustomPlayableFullTypename: 
   m_AnimClip: {fileID: 0}
   m_Parent: {fileID: 114278354713252244}
@@ -2432,7 +2415,6 @@ MonoBehaviour:
   m_Muted: 0
   m_Soloed: 0
   m_Height: 0
-  m_InlineAnimationCurveHeight: 100
   m_CustomPlayableFullTypename: 
   m_AnimClip: {fileID: 74778415308442660}
   m_Parent: {fileID: 114278354713252244}
@@ -2476,7 +2458,6 @@ MonoBehaviour:
   m_Muted: 0
   m_Soloed: 0
   m_Height: 0
-  m_InlineAnimationCurveHeight: 100
   m_CustomPlayableFullTypename: 
   m_AnimClip: {fileID: 0}
   m_Parent: {fileID: 114278354713252244}
@@ -2606,7 +2587,6 @@ MonoBehaviour:
   m_Muted: 0
   m_Soloed: 0
   m_Height: 0
-  m_InlineAnimationCurveHeight: 100
   m_CustomPlayableFullTypename: 
   m_AnimClip: {fileID: 0}
   m_Parent: {fileID: 114278354713252244}
@@ -2692,7 +2672,6 @@ MonoBehaviour:
   m_Muted: 0
   m_Soloed: 0
   m_Height: 0
-  m_InlineAnimationCurveHeight: 100
   m_CustomPlayableFullTypename: 
   m_AnimClip: {fileID: 74306548818681870}
   m_Parent: {fileID: 114278354713252244}
@@ -2722,7 +2701,6 @@ MonoBehaviour:
   m_Muted: 0
   m_Soloed: 0
   m_Height: 0
-  m_InlineAnimationCurveHeight: 100
   m_CustomPlayableFullTypename: 
   m_AnimClip: {fileID: 0}
   m_Parent: {fileID: 114278354713252244}
